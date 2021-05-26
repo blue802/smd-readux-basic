@@ -7,7 +7,7 @@ const GifItems = ({ data }) => {
     data.length &&
     data.map((item) => (
       <div className="gif-item" key={item.id}>
-        <img src={item.url} alt="" />
+        <img src={item.images.original.url} alt="" />
       </div>
     ));
 

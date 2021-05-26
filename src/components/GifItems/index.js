@@ -1,7 +1,9 @@
 import React from "react";
-import "./GifsGrid.css";
+import PropTypes from "prop-types";
 
-const GifsGrid = ({ data }) => {
+import "./GifItems.css";
+
+const GifItems = ({ data }) => {
   const listGifs =
     data.length &&
     data.map((item) => (
@@ -13,4 +15,8 @@ const GifsGrid = ({ data }) => {
   return <div className="gifs-grid">{listGifs}</div>;
 };
 
-export default GifsGrid;
+GifItems.propTypes = {
+  data: PropTypes.array.isRequired,
+};
+
+export default GifItems;

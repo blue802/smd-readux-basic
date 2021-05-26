@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { connect } from "react-redux";
+import "./App.css";
+import GifsGrid from "./components/GifsGrid";
 
-function App() {
+function App({ gifs }) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World</h1>
+      <GifsGrid data={gifs} />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  gifs: state.gifs,
+});
+
+export default connect(mapStateToProps)(App);

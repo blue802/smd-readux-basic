@@ -1,0 +1,14 @@
+.gifs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  columns: 3;
+  column-gap: 10px;
+}
+
+.gif-item {
+  margin-bottom: 5px;
+}
+
+.gif-item img {
+  width: 100%;
+}

@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
+import { useEffect } from "react";
 
 import "./App.css";
 import GifItems from "./components/GifItems";
-import { useEffect } from "react";
 import { getGifsAction } from "./store/gifs/actions";
 
 function App(props) {

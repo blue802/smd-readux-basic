@@ -1,4 +1,4 @@
-import { all, call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 
 import { getGifsPending, getGifsSuccess, getGifsFailure } from "./actions";
 import { getListGifData } from "../../apis/gifAPI";
@@ -14,10 +14,6 @@ function* getListGifAsync() {
   }
 }
 
-function* watchFetchListGifAsync() {
+export function* watchFetchListGifAsync() {
   yield takeLatest(GET_GIFS_REQUEST, getListGifAsync);
-}
-
-export default function* rootSaga() {
-  yield all([watchFetchListGifAsync()]);
 }
